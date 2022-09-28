@@ -13,7 +13,7 @@ const RelatedSongs = ({
     <div className="mt-6 w-full flex flex-col">
       {data?.map((song, i) => (
         <SongBar
-          key={`${song.key}-${artisId}`}
+          key={`${song.key ? song.key : song.id}-${artisId}`}
           song={song}
           i={i}
           artistId={artisId}
